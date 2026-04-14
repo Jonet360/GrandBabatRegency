@@ -1,0 +1,508 @@
+:root {
+    --white: #ffffff;
+    --primary-blue: #1a1a1a; /* Menggunakan warna gelap elegan sesuai tema web */
+    --text-dark: #333333;
+    --shadow: 0 4px 10px rgba(0,0,0,0.08);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    list-style: none;      /* Menghilangkan titik bawaan list */
+}
+
+
+
+
+/* --- KODE UNTUK PANEL INSTAGRAM --- */
+.ig-post {
+    max-width: 450px; /* Ukuran standar postingan agar tidak terlalu lebar di PC */
+    margin: 40px auto; /* Membuat posisinya ke tengah halaman */
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb; /* Garis abu-abu khas IG */
+    border-radius: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Font sistem standar yang dipakai IG */
+}
+
+.ig-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+}
+
+.ig-profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    border: 1px solid #dbdbdb;
+    object-fit: cover;
+}
+
+.ig-username {
+    font-weight: 600;
+    font-size: 14px;
+    color: #262626;
+}
+
+.ig-image img {
+    width: 100%;
+    display: block; /* Menghilangkan jarak kosong di bawah gambar */
+}
+
+.ig-footer {
+    padding: 12px 15px;
+    text-align: left; /* Teks caption rata kiri */
+}
+
+.ig-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #262626;
+    cursor: pointer;
+}
+
+.ig-icons i:hover {
+    color: #8e8e8e; /* Efek saat disentuh */
+}
+
+.ig-likes {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #262626;
+}
+
+.ig-caption {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #262626;
+}
+
+.ig-caption strong {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+
+/* Mengatur margin dan font dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif; /* Font modern untuk teks biasa */
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        /* Navigasi / Header Elegan (Putih) */
+        
+        /* Tombol Menu Mobile */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #1a1a1a;
+        }
+
+        /* Hero Section (Slider Banner) */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background-color: #e0e0e0;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            transition: background-image 0.8s ease-in-out; /* Transisi lebih halus */
+        }
+
+        /* Overlay gelap elegan */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+            font-weight: 300;
+            color: #e0e0e0;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        /* Tombol Jelajahi */
+        .hero-btn {
+            display: inline-block;
+            padding: 12px 35px;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        .hero-btn:hover {
+            background: white;
+            color: #1a1a1a;
+        }
+
+        /* Tombol Navigasi Slider Minimalis */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 2;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-btn:hover {
+            background: white;
+            color: #1a1a1a;
+            border-color: white;
+        }
+
+        .prev-btn { left: 40px; }
+        .next-btn { right: 40px; }
+
+        /* Konten Halaman Bawah */
+        .content-section {
+            padding: 100px 5%;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .content-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #1a1a1a;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .content-section p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Mode Responsif untuk Android / Mobile */
+        /* --- PENGATURAN HAMBURGER ICON --- */
+        /* --- CSS DROPDOWN --- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    list-style: none;
+    padding: 15px 0;
+    border-radius: 8px;
+    border-top: 3px solid #1a1a1a; /* Garis aksen elegan */
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li a {
+    padding: 10px 25px;
+    display: block;
+    color: #444;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #fcfcfc;
+    color: #000;
+    padding-left: 30px;
+}
+
+/* --- CSS FLOATING WHATSAPP --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.2);
+    z-index: 2000;
+    text-decoration: none;
+}
+
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky; /* Menu menempel saat scroll */
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        /* Logo Area */
+        .brand {
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--primary-blue);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+}
+        
+        .brand i { font-size: 24px; }
+
+        /* Menu Utama */
+        .menu {
+            display: flex;
+            gap: 5px;
+        }
+
+        .menu > li > a {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+    border-radius: 5px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+        .menu > li > a:hover {
+            color: var(--primary-blue);
+            background-color: #eef5ff;
+        }
+
+        .menu > li > a.active {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* --- 3. DROPDOWN (SUB MENU) --- */
+        .has-sub { position: relative; }
+        
+        /* Level 2 */
+        .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            padding: 10px 0;
+        }
+
+        /* Tampilkan Level 2 saat hover */
+        .has-sub:hover > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .sub-menu li a {
+            padding: 10px 20px;
+            display: block;
+            font-size: 13px;
+            color: var(--text-dark);
+            transition: var(--transition);
+            display: flex;
+            justify-content: space-between; /* Untuk panah kanan */
+            align-items: center;
+        }
+
+        .sub-menu li a:hover {
+            background-color: #f0f7ff;
+            color: var(--primary-blue);
+            padding-left: 25px; /* Efek geser sedikit */
+        }
+
+        /* Level 3 (Sub-Sub) */
+        .sub-sub {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background: var(--white);
+            min-width: 220px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(10px);
+            transition: var(--transition);
+            margin-left: 10px; /* Jarak sedikit dari induk */
+            padding: 10px 0;
+        }
+
+        /* Tampilkan Level 3 */
+        .sub-menu li.has-sub:hover > .sub-sub {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        /* Ikon Panah Kecil */
+        .arrow-down { font-size: 10px; margin-left: 4px; }
+        .arrow-right { font-size: 10px; opacity: 0.5; }
+
+/* =======================================================
+   PASTIKAN KODE INI BERADA DI BARIS PALING BAWAH STYLE.CSS
+   ======================================================= */
+
+/* --- PENGATURAN HAMBURGER ICON --- */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary-blue);
+}
+
+/* --- MODE RESPONSIF (HP / LAYAR KECIL) --- */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; 
+    }
+
+    .menu {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu > li > a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #f0f0f0;
+        border-radius: 0;
+    }
+
+    /* Penyesuaian Sub-menu / Dropdown di HP */
+    .sub-menu, .sub-sub {
+        position: static !important; /* Memaksa menu agar tidak melayang */
+        box-shadow: none;
+        background-color: #f9f9f9;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: none; 
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .has-sub:hover > .sub-menu,
+    .sub-menu li.has-sub:hover > .sub-sub {
+        display: none; 
+    }
+
+    /* Memunculkan dropdown saat diklik */
+    .has-sub.open > .sub-menu,
+    .sub-menu li.has-sub.open > .sub-sub {
+        display: block;
+    }
+
+    .sub-menu li a { padding-left: 35px; border-bottom: 1px solid #eaeaea; }
+    .sub-sub li a { padding-left: 50px; background-color: #f0f0f0; }
+    
+    .hero-title { font-size: 32px; }
+    .hero-subtitle { font-size: 12px; }
+    .slider-btn { width: 40px; height: 40px; font-size: 14px; }
+    .prev-btn { left: 15px; }
+    .next-btn { right: 15px; }
+}
